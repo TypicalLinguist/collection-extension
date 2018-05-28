@@ -1,0 +1,36 @@
+{
+  "name": "@typical-linguist/collection-extension",
+  "version": "1.0.0",
+  "description": "This a typescript transformer that provides an extension to native collection functionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marthinus-engelbrecht/native-collection-extension.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marthinus-engelbrecht/native-collection-extension/issues"
+  },
+  "homepage": "https://github.com/marthinus-engelbrecht/native-collection-extension#readme",
+  "devDependencies": {
+    "@types/chai": "^4.1.3",
+    "@types/mocha": "^5.2.0",
+    "@types/sinon": "^5.0.0",
+    "@types/sinon-chai": "^2.7.32",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "sinon": "^5.0.10",
+    "sinon-chai": "^3.1.0",
+    "ts-node": "^6.0.5"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.109",
+    "@types/node": "^8.10.17",
+    "lodash": "^4.17.10",
+    "typescript": "^2.8.3"
+  }
+}

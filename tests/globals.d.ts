@@ -7,8 +7,7 @@ declare namespace NodeJS {
     import ExpectStatic = Chai.ExpectStatic;
 
     export interface Global {
-        expect: ExpectStatic
-        sinon: any
+        expect: ExpectStatic;
+        sinon: any;
     }
 }
-

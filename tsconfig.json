@@ -9,6 +9,7 @@
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,
+    "outDir": "build",
     "plugins": [
     ]
   },

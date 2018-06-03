@@ -1,3 +1,5 @@
-import {Array, FlattenDeepOptions, FlattenDepthOptions} from "./main/Array/Array";
+import {Array, FlattenOptions} from "./main/Array/Array";
+import {FlattenDeepOptions} from "./main/Array/FlattenDeepOptions";
+import {FlattenDepthOptions} from "./main/Array/FlattenDepthOptions";
 
-export {Array, FlattenDeepOptions, FlattenDepthOptions};
+export {Array, FlattenOptions, FlattenDeepOptions, FlattenDepthOptions};

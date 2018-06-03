@@ -1,4 +1,4 @@
-import {Array} from "../../source/main/Array/Array";
+import {Array} from "../../../source/main/Array/Array";
 
 const lodash = Array.lodash;
 

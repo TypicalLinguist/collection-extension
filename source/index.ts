@@ -1,3 +1,4 @@
+/// <reference types="node" />
 import {Array, FlattenOptions} from "./main/Array/Array";
 import {FlattenDeepOptions} from "./main/Array/FlattenDeepOptions";
 import {FlattenDepthOptions} from "./main/Array/FlattenDepthOptions";

@@ -6,6 +6,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "noImplicitReturns": true,
+    "strictNullChecks": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "declaration": true,

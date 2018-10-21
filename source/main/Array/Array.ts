@@ -9,6 +9,10 @@ type FlattenOptions = FlattenDepthOptions | FlattenDeepOptions;
 class Array<T> extends global.Array<T | T[]> {
     public static readonly lodash = lodash;
 
+    constructor(...items: T[]) {
+        super(...items)
+    }
+
     public flatten(options?: FlattenOptions): T[] {
         if (options) {
             if (options.hasOwnProperty("depth")) {

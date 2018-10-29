@@ -8,7 +8,7 @@ UnitUnderTest("Map.filter()", function(): void {
         let actualMap: Map<string, number>;
 
         When("executed with a predicate function", function(): void {
-            it("Then it should produce a Map filtered according to the predicate function", function(): void {
+            Then("it should produce a Map filtered according to the predicate function", function(): void {
                 actualMap = startMap.filter(filterOutEvenNumbers);
                 expect(actualMap).to.deep.equal(expectedMap);
             });

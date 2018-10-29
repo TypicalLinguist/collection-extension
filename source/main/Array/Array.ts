@@ -13,17 +13,18 @@ class Array<T> extends global.Array<T | T[]> {
         super(...items)
     }
 
-    public flatten(options?: FlattenOptions): T[] {
+    //TODO: Deal with returned type appropriately, should be concatenation of types at the appropriate level
+    public flatten(options?: FlattenOptions): any[] {
         if (options) {
             if (options.hasOwnProperty("depth")) {
                 const flattenDepthOptions = options as FlattenDepthOptions;
-                return Array.lodash.flattenDepth(this, flattenDepthOptions.depth) as T[];
+                return Array.lodash.flattenDepth(this, flattenDepthOptions.depth);
             } else if (options.hasOwnProperty("deep")) {
                 const flattenDeepOptions = options as FlattenDeepOptions;
                 if (flattenDeepOptions.deep) {
-                    return Array.lodash.flattenDeep(this) as T[];
+                    return Array.lodash.flattenDeep(this);
                 } else {
-                    return Array.lodash.flatten(this) as T[];
+                    return Array.lodash.flatten(this);
                 }
             }
         }

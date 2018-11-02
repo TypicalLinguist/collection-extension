@@ -1,3 +1,5 @@
+import {Array} from "../..";
+
 export class Map<K, V> extends global.Map<K, V> {
     public map<NK, NV>(mapper: (value?: V, key?: K, map?: Map<K, V>) => { key: NK, value: NV }): Map<NK, NV> {
         const newMap = new Map<NK, NV>();
@@ -10,8 +12,8 @@ export class Map<K, V> extends global.Map<K, V> {
         return newMap;
     }
 
-    public mapToArray<T>(mapper: (value?: V, key?: K, map?: Map<K, V>) => T): T[] {
-        const newArray: T[] = [];
+    public mapToArray<T>(mapper: (value?: V, key?: K, map?: Map<K, V>) => T): Array<T> {
+        const newArray: Array<T> = new Array<T>();
 
         this.forEach((value, key) => {
             newArray.push(mapper(value, key));

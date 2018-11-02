@@ -1,5 +1,11 @@
-# Introduction 
+# Usage
+See documentation [here](https://typical-linguist.gitbook.io/collections-extension/)
 
-This library adds collection extensions to Typescript/Javascript
+# Contribution
 
-**Warning:** This project is intended to be used with [`collection-extension-transformer`](https://github.com/marthinus-engelbrecht/native-collection-extension-transformer-typescript)
+### Setup 
+
+    `npm install`
+
+### Testing 
+    `./node_modules/mocha/bin/mocha --require ts-node/register --require ./tests/config/mocha-bootstrap.ts tests/**/**UnitTest.ts`

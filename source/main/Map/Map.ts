@@ -1,4 +1,5 @@
 import {Array} from "../..";
+import deepEqual = require("deep-equal");
 
 export class Map<K, V> extends global.Map<K, V> {
     public map<NK, NV>(mapper: (value?: V, key?: K, map?: Map<K, V>) => { key: NK, value: NV }): Map<NK, NV> {
@@ -37,5 +38,15 @@ export class Map<K, V> extends global.Map<K, V> {
         this.forEach((value: V, key: K) => result.set(key, value));
         map.forEach((value: V, key: K) => result.set(key, value));
         return result;
+    }
+
+    public getReverse(searchValue: V): K | undefined {
+        for (const [key, value] of this) {
+            if (deepEqual(searchValue, value)) {
+                return key;
+            }
+        }
+        
+        return undefined;
     }
 }

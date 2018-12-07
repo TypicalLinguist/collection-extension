@@ -41,4 +41,21 @@ class Array<T> extends global.Array<T> {
     public lastIndex(): number {
         return this.length - 1;
     }
+
+    public async mapAsync<R>(mapFunc: (item: T) => Promise<R>): Promise<Array<R>> {
+        const newArray: Array<R> = new Array<R>();
+
+        await this.forEachAsync(async (item) => {
+            const result = await mapFunc(item);
+            newArray.push(result);
+        });
+
+        return newArray;
+    }
+
+    public async forEachAsync(doFunc: (item: T) => Promise<void>): Promise<void> {
+        for (const item of this) {
+            await doFunc(item);
+        }
+    }
 }

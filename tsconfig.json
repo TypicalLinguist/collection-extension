@@ -19,8 +19,6 @@
     "tests/**/*.ts"
   ],
   "exclude": [
-    "plaform",
-    "www",
-    "examples"
+    "node_modules"
   ]
 }
